@@ -3,99 +3,9 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        
+        <link rel="stylesheet" href="main.css">
     </head>
-    <style>
-        
-        .carousel{
-            max-height: 600px;
-            max-width: 600px;
-            border-radius: 12px 12px 12px 12px;
-            overflow: hidden;
-            margin: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            
-        }
-        .accordion{
-            max-width: 800px;
-            margin: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            
-        }
-        .test{
-            
-            max-width: 50px;
-            max-height: 60px;
-            margin: auto;
-            background-color: aqua;
-            padding-top: 50px;
-        }
-        .importantProject{
-            width: 500px;
-            height: 500px;
-        }
-        .importantProjectImage{
-            display: block;
-            max-height:200px;
-            width: auto;
-            height: auto;
-        }
-        #intro{
-            margin: auto;
-            max-width: 800px;
-            margin-bottom: 50px;
-        }
-        .certificationsImage{
-            display: block;
-            max-height:300px;
-            width: auto;
-            height: auto;
-        }
-        .mailto-message {
-            top: 1px;
-            left: 50%;
-            margin-bottom: -5px;
-            transform: translate(-50%, -100%);
-            position: absolute;
-            display: none;
-            width: auto;
-            white-space: nowrap;
-            font-size: 12px;
-            background-color: black;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 2px;
-            &:after,
-            &:before {
-                content: '';
-            }
-            &:before {
-                top: 100%;
-                left: 50%;
-                border: solid transparent;
-                height: 0;
-                width: 0;
-                position: absolute;
-                pointer-events: none;
-                border-color: rgba(0, 0, 0, 0);
-                border-top-color: #000000;
-                border-width: 4px;
-                margin-left: -4px;
-            }
-        }
-        .mailto-link:hover .mailto-message,
-        .mailto-link:focus .mailto-message,
-        .mailto-link:focus-within .mailto-message {
-            display: block;
-        }
-        
-        
-        
 
-
-    </style>
     <body style="background-color: #501214;">
         
         <nav class="navbar navbar-expand-sm" style="background-color: #6A5638;">
@@ -148,7 +58,7 @@
             <div class="card-body">
                 <h5 class="card-title" style="text-align: center; color: #fff;">Hello!</h5>
                 <p class="card-text" style="color: #fff;">My name is Jack Russell. I am a full time college student studying computer science at Texas State University. 
-                I am actively seeking internship opportunities to work on products and solve problems that will help people on a large scale. 
+                I am actively seeking entry level opportunities to work on products and solve problems that will help people on a large scale. 
                 I am passionately interested in Machine Learning, IoT, and automation roles in software engineering. 
                 My early career goal is to settle in by becoming a sponge for information. To learn as much as I can and become a positive 
                 contributor as soon as I possibly can. Eventually I would like to get to a place in my career where I am making decisions that directly
@@ -163,11 +73,29 @@
 
         
         <div style="background-color: #fff;">
-            <h2 style="text-align: center; color: #501214;">Projects</h2>
+            <h2 style="text-align: center; color: #501214;">Recent Projects and Experience</h2>
             <div class="row" style="padding-bottom: 10px; padding-top: 10px;">
-
+                <div class="col">
+                    <div class="row justify-content-end" style="padding-left: 10px;">
+                        <div class="card importantProject align-items-center">
+                            <img src="imgs/Charles Schwab Logo.png" class="card-img-top importantProjectImage" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: #501214;">Charles Schwab, Software Development Engineer Intern</h5>
+                                <ul style="color: #501214;">
+                                    <li>Modernized the trade app from a monolith architecture to a single page app utilizing Angular and .NET MVC APIs</li>
+                                    <li>Supported users by identifying improvements to TTI, error rate, availability, and 95th percentile time</li>
+                                    <li>Accelerated the team’s AGILE development by accepting, unit testing, and deploying backlogged user stories</li>
+                                    <li>Designed the UX of a new internal engineering blog by delivering figma wireframes to stakeholders</li>
+                                    <li>Won a business case challenge by leading research, development, and presentation, of a new innovative product</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
                 <div class="col" style="padding-right: 10px;">
-                    <div class="row justify-content-end" style="padding-right: 10px;">
+                    <div class="row justify-content-start" style="padding-right: 10px;">
                         <div class="card importantProject align-items-center">
                             <img src="/imgs/Raspberry_Pi_Temperature_Sensor.jpeg" class="card-img-top importantProjectImage" alt="DHT22 Temperature Sensor">
                             <div class="card-body">
@@ -184,16 +112,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
+            </div>
 
+            <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
                 <div class="col">
-                    <div class="row" style="padding-left: 10px;">
-                        <div class="card importantProject align-items-center" style="">
+                    <div class="row justify-content-end" style="padding-left: 10px;">
+                        <div class="card importantProject align-items-center">
                             <img src="imgs/Data Science Research.jpg" class="card-img-top importantProjectImage" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title" style="color: #501214;">Corrosion Detection Convulutional Nueral Network</h5>
                                 <ul style="color: #501214;">
-                                    <li>Supported a NASA-sponsored study by creating a robust data pipeline to accurately measure corrosion in microscopic images of corrosion samples obtained from a microgravity environment</li>
+                                    <li>Supported a NASA-sponsored study by creating a data pipeline to accurately measure corrosion in microscopic images from a microgravity environment</li>
                                     <li>Attained an impressive 40-60% accuracy rate by leveraging Open-MMLab's MMSegmentation library to construct a cutting-edge UNET model for corrosion detection, matching industry standards</li>
                                     <li>Effectively communicated our research to stakeholders and department members through engaging presentations</li>
                                 </ul>
@@ -201,12 +131,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
-
+                
                 <div class="col">
-                    <div class="row justify-content-end" style="padding-right: 10px;">
-                        <div class="card importantProject align-items-center" style="">
+                    <div class="row justify-content-start" style="padding-right: 10px;">
+                        <div class="card importantProject align-items-center">
                             <img src="imgs/Data_for_Good.jpg" class="card-img-top importantProjectImage" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title" style="color: #501214;">JPMorgan Chase Data for Good Hackathon</h5>
@@ -218,11 +146,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>    
+            </div>
 
+            <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
                 <div class="col">
-                    <div class="row" style="padding-left: 10px;">
-                        <div class="card importantProject align-items-center" style="">
+                    <div class="row justify-content-end" style="padding-left: 10px;">
+                        <div class="card importantProject align-items-center">
                             <img src="imgs/inventory-manager-ss.png" class="card-img-top importantProjectImage" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title" style="color: #501214;">Inventory Manager and Audit App</h5>
@@ -235,9 +165,9 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="col">
-                    <div class="row" style="padding-left: 10px;">
+                    <div class="row justify-content-start">
                         <div class="card importantProject align-items-center">
                             <img src="/imgs/JupyterHub.png" class="card-img-top importantProjectImage" alt="DHT22 Temperature Sensor">
                             <div class="card-body">
@@ -251,19 +181,42 @@
                     </div>
                 </div>
             </div>
-        
         </div>
 
         <h3 style="text-align: center; color: #fff;">Experience</h3>
 
         <div class="accordion" id="projectAccordion" style="border-radius: 12px 12px 12px 12px;">
             <div class="accordion-item">
+                <h2 class="accordion-header" id="headingZero">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero" style="background-color: rgb(202, 42, 45); color: #fff;">
+                        Charles Schwab, Software Development Engineer Intern
+                    </button>
+                </h2>
+                <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#projectAccordion">
+                    <div class="accordion-body" style="background-color: rgb(202, 42, 45);">
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <ul style="color: #fff;">
+                                    <li>Modernized the trade app from a monolith architecture to a single page app utilizing Angular and .NET MVC APIs</li>
+                                    <li>Supported users by identifying improvements to TTI, error rate, availability, and 95th percentile time</li>
+                                    <li>Accelerated the team’s AGILE development by accepting, unit testing, and deploying backlogged user stories</li>
+                                    <li>Designed the UX of a new internal engineering blog by delivering figma wireframes to stakeholders</li>
+                                    <li>Won a business case challenge by leading research, development, and presentation, of a new innovative product</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: rgb(202, 42, 45); color: #fff;">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="background-color: rgb(202, 42, 45); color: #fff;">
                         Instructional Assistant, Computer Science Infrastructure Team (Jan 2022 - Present)
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
                     <div class="accordion-body" style="background-color: rgb(202, 42, 45);">
                         <div class="row align-items-start">
                             <div class="col">
