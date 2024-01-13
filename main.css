@@ -1,13 +1,25 @@
-
-.carousel{
+#siteImageCarousel{
     max-height: 600px;
-    max-width: 600px;
+    width: auto;
     border-radius: 12px 12px 12px 12px;
     overflow: hidden;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    max-width: 800px;
     
+}
+#siteImageCarousel .carousel-item img {
+    width: auto;
+    height: 600px;
+    max-height: 600px;
+    margin: auto;
+    display: block;
+}
+.carousel-control-prev, .carousel-control-next {
+    top: 50%;
+    bottom: 0;
+    transform: translateY(-50%);
 }
 .accordion{
     max-width: 800px;
@@ -39,11 +51,23 @@
     max-width: 800px;
     margin-bottom: 50px;
 }
-.certificationsImage{
-    display: block;
-    max-height:300px;
+#certificationsImageCarousel{
+    max-height: 300px;
     width: auto;
-    height: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    
+}
+#certificationsImageCarousel .carousel-item img {
+    width: auto;
+    height: 300px;
+    max-height: 300px;
+    margin: auto;
+    display: block;
 }
 .mailto-message {
     top: 1px;
@@ -82,7 +106,3 @@
 .mailto-link:focus-within .mailto-message {
     display: block;
 }
-
-
-
-
