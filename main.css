@@ -1,5 +1,20 @@
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+#carousel-column, #bio-box {
+    flex: 0 0 auto;
+}
+
+#carousel-column{
+    width: 50%;
+}
+
 #siteImageCarousel{
-    max-height: 317px;
+    max-height: 324px;
     border-radius: 12px 0px 0px 12px;
     overflow: hidden;
     margin: 0;
@@ -7,9 +22,10 @@
 }
 
 #siteImageCarousel .carousel-item img {
+    transition: max-width 0.5s ease;
     width: auto;
-    height: 317px;
-    max-height: 317px;
+    height: 324px;
+    max-height: 324px;
     margin: auto;
     display: block;
 }
@@ -21,6 +37,9 @@
 }
 
 #bio-box {
+    height: 324px;
+    max-height: 324px;
+    width: 432px;
     display: flex;
     border-radius: 0px 12px 12px 0px;
     flex-direction: column;
@@ -30,15 +49,22 @@
 }
 
 @media (max-width: 768px) {
-    .centered-container .col-md-8, 
-    .centered-container .col-md-4 {
-        width: 100%; /* Full width on smaller screens */
-        max-width: none; /* Override max-width if set earlier */
+    .centered-container {
+        flex-direction: column;
     }
-    #siteImageCarousel{
-        border-radius: 12px 12px 12px 12px;
+
+    #carousel-column {
+        width: 100%;
     }
-    #bio-box{
-        border-radius: 12px 12px 12px 12px;
+
+    #siteImageCarousel, #bio-box {
+        border-radius: 12px;
+    }
+
+    #bio-box {
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        max-height: none;
     }
 }
