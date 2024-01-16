@@ -171,11 +171,7 @@
             function adjustCarouselWidth(carouselId) {
                 var activeImage = $('#'+carouselId+' .carousel-item.active img');
                 var imageWidth = activeImage.width();
-                $('#'+carouselId).css({
-                    'transition': 'max-width 0.5s ease',
-                    'max-width': imageWidth + "px"
-                });
-    
+                $('#'+carouselId).css('max-width', imageWidth+'px');    
             }
 
         </script>

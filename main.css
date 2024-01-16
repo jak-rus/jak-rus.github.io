@@ -14,6 +14,7 @@
 }
 
 #siteImageCarousel{
+    transition: max-width 0.5s ease;
     max-height: 324px;
     border-radius: 12px 0px 0px 12px;
     overflow: hidden;
@@ -22,7 +23,6 @@
 }
 
 #siteImageCarousel .carousel-item img {
-    transition: max-width 0.5s ease;
     width: auto;
     height: 324px;
     max-height: 324px;
