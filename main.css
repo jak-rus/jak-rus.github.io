@@ -14,15 +14,16 @@
 }
 
 #siteImageCarousel{
-    transition: max-width 0.5s ease;
+    transition: width 0.5s ease;
     max-height: 324px;
     border-radius: 12px 0px 0px 12px;
     overflow: hidden;
     margin: 0;
-    max-width: 800px;
+    max-width: 800px
 }
 
 #siteImageCarousel .carousel-item img {
+    transition: opacity 0.2s ease;
     width: auto;
     height: 324px;
     max-height: 324px;
@@ -30,10 +31,18 @@
     display: block;
 }
 
+#siteImageCarousel .carousel-inner {
+    background: #adb5bd; /* Or any other color or even a gradient/image */
+}
+
 .carousel-control-prev, .carousel-control-next {
     top: 50%;
     bottom: 0;
     transform: translateY(-50%);
+}
+
+#bio-box-column {
+    width: 50%;
 }
 
 #bio-box {
@@ -53,7 +62,7 @@
         flex-direction: column;
     }
 
-    #carousel-column {
+    #carousel-column #bio-box-column{
         width: 100%;
     }
 

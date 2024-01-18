@@ -24,18 +24,18 @@
                 <div class="centered-container d-flex justify-content-center mx-auto">
                     <!-- Carousel Column -->
                     <div id="carousel-column" class="d-flex justify-content-lg-end justify-content-center">
-                        <div id="siteImageCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div id="siteImageCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/imgs/Jack'sSenior-15.JPG"class="d-block" alt="...">
+                                    <img src="/imgs/Jack'sSenior-15_resized.jpg"class="d-block" alt="...">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="/imgs/Raspberry_Pi_Temperature_Sensor.jpeg" class="d-block " alt="...">
+                                    <img src="/imgs/Raspberry_Pi_Temperature_Sensor_resized.jpg" class="d-block " alt="...">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="/imgs/Jack'sSenior-48.JPG" class="d-block" alt="...">
+                                    <img src="/imgs/Jack'sSenior-48_resized.jpg" class="d-block" alt="...">
                                 </div>
 
                                 <div class="carousel-item">
@@ -43,11 +43,11 @@
                                 </div>
 
                                 <div class="carousel-item">  
-                                    <img src="/imgs/Data_for_Good_2.jpg" class="d-block" alt="...">
+                                    <img src="/imgs/Data_for_Good_2_resized.jpg" class="d-block" alt="...">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="/imgs/Deans_List_Photo.jpeg" class="d-block" alt="...">
+                                    <img src="/imgs/Deans_List_Photo_resized.jpg" class="d-block" alt="...">
                                 </div>
 
                                 <div class="carousel-item">
@@ -55,19 +55,19 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="/imgs/Data Science Research.jpg" class="d-block" alt="...">
+                                    <img src="/imgs/Data Science Research_resized.jpg" class="d-block" alt="...">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="/imgs/NRF Group.jpg" class="d-block" alt="...">
+                                    <img src="/imgs/NRF Group_resized.jpg" class="d-block" alt="...">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="/imgs/Jack'sSenior-25.JPG" class="d-block" alt="...">
+                                    <img src="/imgs/Jack'sSenior-25_resized.jpg" class="d-block" alt="...">
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="/imgs/IMG_5031.jpg" class="d-block" alt="...">
+                                    <img src="/imgs/IMG_5031_resized.jpg" class="d-block" alt="...">
                                 </div>
 
                             </div>
@@ -87,7 +87,7 @@
                     </div>
 
                     <!-- Bio Box Column -->
-                    <div id="bio-box" class="p-0 justify-content-lg-end justify-content-center">
+                    <div id="bio-box-column" class="p-0 justify-content-lg-end justify-content-center">
                         <div id="bio-box" class="text-bg-danger">
                             My name is Jack Russell. I am a recent College Graduate in Computer Science from Texas State University. This coming April, I am excited to be starting as a Software Developer Engineer at Charles Schwab in the NERD Program. 
                             I am passionately interested in Machine Learning, IoT, and automation roles in software engineering. 
@@ -116,15 +116,24 @@
 
                 // Set site carousel size initially, and change dynamically when the image changes
                 adjustCarouselWidth("siteImageCarousel");
-                $('#siteImageCarousel').on('slid.bs.carousel', function () {
-                    adjustCarouselWidth("siteImageCarousel");
+                $('#siteImageCarousel').on('slide.bs.carousel', function() {
+                    $('#siteImageCarousel .carousel-item.active img').css('opacity', 0);
                 });
 
-                // Set certifications carousel size initially, and change dynamically when the image changes
-                adjustCarouselWidth("certificationsImageCarousel");
-                $('#certificationsImageCarousel').on('slid.bs.carousel', function () {
-                    adjustCarouselWidth("certificationsImageCarousel");
+                $('#siteImageCarousel').on('slid.bs.carousel', function () {
+                    adjustCarouselWidth("siteImageCarousel");
+
+                    currentActiveItem = $('#siteImageCarousel .carousel-item.active');
+                    var previousItem = currentActiveItem.prev('.carousel-item');
+
+                    if(previousItem.length == 0){
+                        previouseItem = $('#siteImageCarousel .carousel-item').last();
+                    }
+
+                    previousItem.find('img').css('opacity', 1)
                 });
+
+                
 
                 // Add class to mailto link
                 // Needed to separate the disabling of the default action AND copy email to clipboard
@@ -168,10 +177,16 @@
 
             // Adjust carousel size to current picutre
             // Makes sure arrows are within the carousel image
-            function adjustCarouselWidth(carouselId) {
-                var activeImage = $('#'+carouselId+' .carousel-item.active img');
+            // function adjustCarouselWidth(carouselId) {
+            //     var activeImage = $('#'+carouselId+' .carousel-item.active img');
+            //     var imageWidth = activeImage.width();
+            //     $('#'+carouselId).css('max-width', imageWidth+'px');    
+            // }
+
+            function adjustCarouselWidth(carouselId){
+                var activeImage = $('#' + carouselId + ' .carousel-item.active img');
                 var imageWidth = activeImage.width();
-                $('#'+carouselId).css('max-width', imageWidth+'px');    
+                $('#' + carouselId).css('width', imageWidth + 'px');
             }
 
         </script>
