@@ -80,6 +80,22 @@
     margin-right: 10px;
 }
 
+#about-icon-column {
+    width: auto;
+    height: 324px;
+    max-height: 324px;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#about-intro-column {
+    width: 35%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
 @media (max-width: 768px) {
     .centered-container {
