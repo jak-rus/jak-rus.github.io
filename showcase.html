@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jack Russell</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="showcase.css">
+        <script src="https://kit.fontawesome.com/9b2deb7334.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/main-logo.png" alt="Logo" style="height: 40px;"> <!-- Adjust height as needed -->
+                    <!-- Other navbar content -->
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Showcase</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About Me</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="section-title" style="text-align: center;">
+                <h2>Showcase</h5>
+            </div>
+        </div>
+        <div class="container">
+            <h3>Technical Projects</h3>
+            <div class="projects-section">
+                <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Raspberry Pi Temperature Sensor</h5>
+                        <ul>
+                            <li>Implemented an automated room monitoring system to handle bad data from the current room thermostat</li>
+                            <li><strong class="text-danger">Saved $500,000 of Research Servers</strong> by utilizing a raspberry pi, Python3, and open source libraries for database needs and email notification functionality</li>
+                            <li>Created a web-based UI through an Nginx Server</li>
+                            <li>Designed automated services to run the temperature and humidity sensor on the raspberry pi</li>
+                        </ul>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Corrosion Detection Convulutional Nueral Network</h5>
+                        <ul style="color: #501214;">
+                            <li>Supported a NASA-sponsored study by creating a data pipeline to accurately measure corrosion in microscopic images from a microgravity environment</li>
+                            <li>Attained an impressive 40-60% accuracy rate by leveraging Open-MMLab's MMSegmentation library to construct a cutting-edge UNET model for corrosion detection, matching industry standards</li>
+                            <li>Effectively communicated our research to stakeholders and department members through engaging presentations</li>
+                        </ul>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">JPMorgan Chase Data for Good Hackathon</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: auto;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Leadership Projects</h3>
+        </div>
+
+        <div class="container" style="padding-bottom: 15px;">
+            <h3>Awards</h3>
+        </div>
+
+        <footer class="bg-light text-center p-3">
+            <div class="container">
+                <h5>Contact Me!</h5>
+                <div>
+                    <a href="https://www.linkedin.com/in/jack-w-russell/" class="btn btn-outline-primary m-2" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/jak-rus" class="btn btn-outline-dark m-2" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:jwarrussell@gmail.com" class="btn btn-outline-secondary m-2" onclick="copyEmail()">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                // Add class to mailto link
+                // Needed to separate the disabling of the default action AND copy email to clipboard
+                $('a[href^=mailto]').addClass('mailto-link');
+
+                var mailto = $('.mailto-link');
+                var messageCopy = '';
+                var messageSuccess = 'Email Copied to Clipboard';
+                
+                mailto.append('<span class="mailto-message"></span>');
+                $('.mailto-message').append(messageCopy);
+                
+                // Disable opening your email client. yuk.
+                $('a[href^=mailto]').click(function() {
+                    return false; 
+                })
+                
+                // On click, get href and remove 'mailto:' from value
+                // Store email address in a variable.
+                mailto.click(function() {
+                    var href = $(this).attr('href');
+                    var email = href.replace('mailto:', '');
+                    copyToClipboard(email);
+                    $('.mailto-message').empty().append(messageSuccess);
+                    setTimeout(function() {
+                        $('.mailto-message').empty().append(messageCopy);}, 2000); 
+                });
+                
+            });
+
+            // Grabbed this from Stack Overflow.
+            // Copies the email variable to clipboard
+            function copyToClipboard(text) {
+                var dummy = document.createElement("input");
+                document.body.appendChild(dummy);
+                dummy.setAttribute('value', text);
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+            }
+
+            function adjustCarouselWidth(carouselId){
+                var activeImage = $('#' + carouselId + ' .carousel-item.active img');
+                var imageWidth = activeImage.width();
+                $('#' + carouselId).css('width', imageWidth + 'px');
+            }
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+</html>
