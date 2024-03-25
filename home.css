@@ -113,13 +113,6 @@
     margin-bottom: auto;
 }
 
-.contact-me-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
 .nav-section {
     flex: 1;
 }
