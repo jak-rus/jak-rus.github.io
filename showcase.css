@@ -1,3 +1,13 @@
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%)
+    }
+    
+}
+
 .projects-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -12,15 +22,24 @@
 }
 
 .scrolling-wrapper {
-    display: flex;
-    overflow-x: auto;
-    height: auto;
+    width: auto;
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.scrolling-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+    margin-right: 0px;
 }
 
 .award-card {
-    flex: 0 0 auto;
-    width: 25%;
-    margin-right: 20px;
+    display: inline-flex;
+    width: 350px;
+    margin-right: 0 40px;
+    white-space: normal;
 }
 
 
