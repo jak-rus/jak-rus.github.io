@@ -1,0 +1,42 @@
+.section-icon-column {
+    width: auto;
+    height: 510px;
+    max-height: 510px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section-intro-column {
+    width: 60%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+@media (max-width: 768px) {
+    .section{
+        flex-direction: column!important;
+        align-items: center;
+        width: 100%;
+    }
+    .section-title {
+        text-align: center!important;
+    }
+    .section-icon-column{
+        max-width: 400px;
+        overflow: hidden;
+    }
+    .section-intro-column {
+        width: auto;
+    }
+    
+    .flipped .section-intro-column {
+        order: 2;
+    }
+    
+    .flipped .section-icon-column {
+        order: 1;
+    }
+}

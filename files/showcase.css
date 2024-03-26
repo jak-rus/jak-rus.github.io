@@ -1,0 +1,87 @@
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%)
+    }
+    
+}
+
+.projects-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem 0;
+}
+
+.proejct-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.scrolling-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    position: relative;
+}
+
+.scrolling-wrapper:before, 
+.scrolling-wrapper:after {
+    position: absolute;
+    top: 0;
+    width: 180px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.scrolling-wrapper:before {
+    left: 0;
+    background: linear-gradient(to left, rgb(255, 255, 255, 0), white);
+}
+
+.scrolling-wrapper:after {
+    right: 0;
+    background: linear-gradient(to right, rgb(255, 255, 255, 0), white);
+}
+
+.scrolling-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+    margin-right: 0px;
+}
+
+.scrolling-wrapper:hover .scrolling-slide{
+    animation-play-state: paused;
+}
+
+.award-card {
+    display: inline-flex;
+    width: 350px;
+    margin-right: 0 40px;
+    white-space: normal;
+}
+
+@media (max-width: 1024px) {
+   .projects-section {
+    grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .scrolling-wrapper:before, .scrolling-wrapper:after {
+        z-index: 0;
+        background: none;
+    }
+    
+}
+
+
+
